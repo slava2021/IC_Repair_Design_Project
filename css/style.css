@@ -1,0 +1,118 @@
+@font-face {
+  font-family: 'nunitosans';
+  src: url('../fonts/nunitosans-regular-webfont.woff2') format('woff2'), url('../fonts/nunitosans-regular-webfont.woff') format('woff'), url('../fonts/nunitosans-regular-webfont.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'nunitosans-italic';
+  src: url('../fonts/nunitosans-italic-webfont.woff2') format('woff2'), url('../fonts/nunitosans-italic-webfont.woff') format('woff'), url('../fonts/nunitosans-italic-webfont.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'yesevaone';
+  src: url('../fonts/yesevaone-regular_v2-webfont.woff2') format('woff2'), url('../fonts/yesevaone-regular_v2-webfont.woff') format('woff'), url('../fonts/yesevaone-regular_v2-webfont.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-style: "nunitosans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.header-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 83px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.container {
+  max-width: 1263px;
+  margin: 0 auto;
+}
+.header {
+  background-color: #131313;
+  height: 83px;
+}
+.main-home {
+  background: top center / cover rgba(0, 0, 0, 0.7) no-repeat url(../images/home_bg.jpg);
+  height: 707px;
+}
+.button {
+  font-style: "nunitosans-italic", sans-serif;
+  font-style: italic;
+  font-size: 11px;
+  border-radius: 2px;
+  background-color: #e3b873;
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(227, 184, 115, 0.2);
+          box-shadow: 0px 5px 15px 0px rgba(227, 184, 115, 0.2);
+  color: #ffffff;
+  text-transform: uppercase;
+  border: none;
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+.button:hover {
+  background: #dba249;
+}
+.button:active {
+  color: #b3b3b3;
+  background-color: #f4e3c8;
+}
+.header-button {
+  padding: 13px 33px;
+  cursor: pointer;
+}
+.title {
+  font-family: "yesevaone", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #e3b873;
+  line-height: 138.6%;
+  /* 24.948px */
+  text-transform: uppercase;
+}
+.header-link {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 47px;
+  padding: 4px 0;
+  /*
+    &:focus{
+        color: lighten(@secondary-color, 10%);
+
+    }*/
+}
+.header-link:hover {
+  color: #e3b873;
+}
+.header-link:active {
+  color: #c88b28;
+}
+.header-logo {
+  color: #e3b873;
+}
+.header-phone {
+  color: #e3b873;
+  text-align: right;
+  font-size: 11px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+.header-section:not(button) {
+  font-family: "nunitosans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 11px;
+  line-height: normal;
+}

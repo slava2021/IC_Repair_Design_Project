@@ -39,6 +39,8 @@
     border: 1px solid @primary-color;
 }
 
+
+//Section projects - slider
 .button-left,
 .button-right
 {
@@ -94,3 +96,48 @@
 .main-projects__slider-nav button:last-child{
     margin-left: 29px;
 }
+
+//Video section
+.main-video__button{
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    border-radius: 100%;
+    padding: 0;
+    border: none;
+    background-color: @secondary-color;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+
+    & .play-ico{
+        margin: 0 auto;
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom: 20px solid @primary-color;
+        rotate: 90deg;
+    }
+
+}
+
+.main-video__button:hover{
+    background-color: darken(@secondary-color, 10%);
+}
+
+.main-video__button:active{
+    background-color: lighten(@secondary-color, 10%);
+}
+.main-video__button:focus{
+    -webkit-box-shadow: 0px 0px 0px 1px @primary-color;
+    -moz-box-shadow: 0px 0px 0px 1px @primary-color;
+    box-shadow: 0px 0px 0px 1px @primary-color;
+}
+
+//Section Video -> Form request
+

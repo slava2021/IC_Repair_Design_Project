@@ -1,0 +1,149 @@
+.main-video__form{
+    margin: 0 auto;
+    margin-bottom: 148px;
+
+    & .main-video__label{
+        display: flex;
+        flex-wrap: wrap;
+        width: 231px;
+        .font-text();
+        color: rgba(54, 54, 54, 0.50);
+        font-size: 13px;
+        line-height: 163.68%; /* 21.278px */
+    }
+
+    .container{
+        width: 100%;
+        text-align: center;
+        padding-top: 39px;
+    }
+
+    & input[type="text"],
+    & input[type="phone"]
+    {
+        width: auto;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid @third_color;
+        padding: 7px 0;
+    }
+
+    & input[type="text"]::placeholder,
+    & input[type="phone"]::placeholder{
+        .font-text();
+        color: @third_color;
+        font-size: 14px;
+        line-height: 163.68%; /* 22.915px */
+    }
+
+    & input[type="text"]:focus,
+    & input[type="phone"]:focus{
+        outline: none;
+        -webkit-box-shadow: 0px 11px 8px -9px rgba(34, 60, 80, 0.2);
+        -box-shadow: 0px 11px 8px -9px rgba(34, 60, 80, 0.2);
+        box-shadow: 0px 11px 8px -9px rgba(34, 60, 80, 0.2);
+    }
+
+    & input[type="text"]{
+        margin-right: 58px;
+    }
+
+    & input[type="phone"]{
+        margin-right: 49px;
+    }
+
+    & input[type="submit"]{
+        border: none;
+        background-color: @secondary-color;
+        .font-text();
+        color: #FFF;
+        text-align: center;
+        font-size: 13px;
+        padding: 20px 76px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background-color .2s ease-in-out;
+
+        &:hover{
+                background-color: darken(@secondary-color, 10%);
+            }
+            
+        &:active{
+                background-color: lighten(@secondary-color, 10%);
+            }
+    }
+
+    & label:last-child{
+        display: inline-block;
+        position: relative;
+        padding-left: 27px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        width: auto;
+        text-align: center;
+        .font-text();
+        color: @forth-color;
+        font-size: 14px;
+        line-height: 163.68%; /* 22.915px */
+
+        /* Hide the browser's default checkbox */
+        &  input[type="checkbox"]{
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        /* Create a custom checkbox */
+        & .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 18px;
+            width: 18px;
+            background-color: #eee;
+        }
+
+        /* On mouse-over, add a grey background color */
+        &:hover input[type="checkbox"] ~ .checkmark {
+            background-color: #ccc;
+        }
+
+        /* When the checkbox is checked, add a blue background */
+        & input[type="checkbox"]:checked ~ .checkmark {
+            background-color: @secondary-color;
+        }
+
+        /* Create the checkmark/indicator (hidden when not checked) */
+        & .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Show the checkmark when checked */
+        & input[type="checkbox"]:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        /* Style the checkmark/indicator */
+        & .checkmark:after {
+            left: 6px;
+            top: 4px;
+            width: 4px;
+            height: 6px;
+            border: solid white;
+            border-width: 0 1px 1px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        
+    }
+}

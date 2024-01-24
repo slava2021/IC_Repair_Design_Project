@@ -7,6 +7,7 @@
     padding-bottom: 35px;
 }
 
+//Section Projects
 .main-projects__p{
     .font-text();
     color: @primary-color;
@@ -25,4 +26,25 @@
 .main-projects__h3{
     .font-title(@secondary-color);
     font-size: 18px;
+}
+
+//Section Video
+.main-video__p{
+    margin: 0 auto;
+    width: 681px;
+    .font-text();
+    color: #363636;
+    text-align: center;
+    font-size: 18px;
+    line-height: 204.6%; /* 36.828px */
+    padding-bottom: 91px;
+
+    &::before{
+        display: block;
+        content: "";
+        width:55px;
+        border-top: 2px solid @secondary-color;
+        margin: 0 auto;
+        padding-bottom: 34px;
+    }
 }

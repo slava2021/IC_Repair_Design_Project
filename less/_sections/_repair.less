@@ -1,0 +1,66 @@
+.main-repair__block{
+    max-width: 392px;
+    //min-width: 340px;
+    height: 421px;
+    //padding-top: 294px;
+    padding-left: 31px;
+    padding-right: 31px;
+
+    &.redecorating{
+        background: center no-repeat url("../images/redecorating.jpg");
+        background-size: cover;
+    }
+
+    &.overhaul{
+        background: center no-repeat url("../images/overhaul.jpg");
+        background-size: cover;
+    }
+
+    &.designer{
+        background: center no-repeat url("../images/designer.jpg");
+        background-size: cover;
+    }
+}
+
+.main-repair__content{
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 330px;
+    position: relative;
+    background-color: @primary-color;
+    padding-top: 25px;
+    padding-left: 34px;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03);
+    top: 294px;
+}
+
+//Section Repair
+.main-repair__list{
+    padding-bottom: 49px;
+    & li{
+        &:before{
+            display: inline-block;
+            content: "";
+            width: 5px;
+            height: 5px;
+            border-radius: 100%;
+            background-color: #959595;
+            margin-right: 6px;
+            margin-bottom: 1px;
+        }
+    }
+
+}
+
+.main-repair__price{
+    position: absolute;
+   .font-title(@primary-color);
+    font-size: 18px;
+    background-color: @secondary-color;
+    padding: 17px 21px;
+    box-shadow: 5px 5px 10px 0px rgba(227, 184, 115, 0.30);
+    z-index: 10;
+    bottom:-28px;
+    left: 0px;
+}
+

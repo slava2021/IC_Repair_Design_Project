@@ -1,0 +1,33 @@
+.main-gallery__links{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    & > li{
+        margin-bottom: 25px;
+    }
+
+    & li a {
+        .font-text();
+        color: #FFF;
+        font-size: 20px;
+        text-decoration: none;
+
+        &:hover{
+            color: darken(@primary-color,20%)
+        }
+        &:active{
+            color: darken(@primary-color,30%);
+        }
+    }
+
+    & li a.active-btn{
+        display: inline-block;
+        border-bottom: 1px solid @secondary-color;
+        .font-text();
+        color: #E3B873;
+        font-size: 20px;
+        line-height: 120%; /* 38.192px */
+    }
+
+}

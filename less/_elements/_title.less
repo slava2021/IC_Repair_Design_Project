@@ -2,7 +2,7 @@
     .font-title(@secondary-color)
 }
 
-//Main Home block
+//Section Home
 .main-home__h1{
     .font-title(@primary-color);
     font-family: @font-yeseva;
@@ -16,6 +16,7 @@
     }
 }
 
+//Section Projects
 .main-projects__h2{
     .font-title(@secondary-color);
     font-size: 27px;
@@ -24,18 +25,54 @@
     padding-top: 176px;
 }
 
-.main-projects__h4{
-    .font-title(@primary-color);
-    color: #FFF;
-    font-size: 20px;
+.main-projects__h3{
+    .font-title(@secondary-color);
+    font-size: 18px;
+}
+
+//h2 for video, repair
+.main-video__h2,
+.main-repair__h2{
     text-align: center;
-    padding-top: 92px;
+    font-size: 20px;
     margin: 0;
 }
-.main-project__wraper{
+
+//Section video
+.main-video__h2{
+    .font-title(@primary-color);
+    padding-top: 92px;
+}
+
+//Section Repair
+.main-repair__h2{
+    .font-title(@forth-color);
+}
+
+.main-repair__h3{
+    .font-title(@third_color);
+    font-size: 18px;
+    text-transform: capitalize;
+    margin: 0;
+    padding-bottom: 13px;
+}
+
+//Section Measurement
+.main-measurement__h2{
+    width: 220px;
     margin: 0 auto;
-    padding-top: 13px;
-    padding-bottom: 31px;
-    display: flex;
-    justify-content: center;
+    padding-top: 28px;
+    padding-bottom: 39px;
+    .font-text();
+    color: @primary-color;
+    text-align: center;
+    font-size: 18px;
+    line-height: 143.22%; /* 25.78px */
+}
+
+//Section Gallery
+
+.main-gallery__h2{
+    .font-title(@secondary-color);
+    padding-bottom: 47px;
 }

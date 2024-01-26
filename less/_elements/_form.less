@@ -247,6 +247,7 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, auto);
     grid-column-gap: 58px;
+    grid-row-gap: 48px;
     margin: 0 auto;
     width: 520px;
 
@@ -255,7 +256,7 @@
         grid-column-end: 1;
         grid-row-start: 1;
         grid-row-end: 1;
-        border: 1px solid yellow;
+        //border: 1px solid yellow;
     }
 
     & .item-2{
@@ -263,7 +264,7 @@
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 1;
-        border: 1px solid white;
+        //border: 1px solid white;
     }
 
     & .item-3{
@@ -271,7 +272,7 @@
         grid-column-end: 3;
         grid-row-start: 2;
         grid-row-end: 2;
-        border: 1px solid red;
+        //border: 1px solid red;
     }
 
     & .item-4{
@@ -279,7 +280,7 @@
         grid-column-end: 3;
         grid-row-start: 3;
         grid-row-end: 3;
-        border: 1px solid blue;
+        //border: 1px solid blue;
         text-align: center;
     }
     & .item-5{
@@ -288,7 +289,7 @@
         grid-row-start: 4;
         grid-row-end: 4;
         text-align: center;
-        border: 1px solid green;
+        //border: 1px solid green;
     }
 
     & .main-contacts__label{
@@ -307,10 +308,10 @@
         color: @primary-color;
     }
 
-    & input[type="text"],
-    & input[type="phone"]{
-        margin-bottom: 48px;
-    }
+    //& input[type="text"],
+    //& input[type="phone"]{
+    //    margin-bottom: 48px;
+    //}
 
     & input[type="mail"]{
         margin-bottom: 17px;
@@ -325,12 +326,11 @@
 
     .container{
         width: 100%;
-        padding-bottom: 39px;
     }
 
     & input[type="submit"]{
         align-self:flex-end;
-        padding: 19px 22px;
+        padding: 20px 60px;
     }
 
     & label:last-child{

@@ -129,3 +129,43 @@
     padding-top: 34px;
     padding-bottom: 45px;
 }
+
+.secondary-color{
+    margin: 0 auto;
+    color: @secondary-color;
+    padding-top: 275px;
+    padding-bottom: 26px;
+    width: 50%;
+}
+
+.main-contacts__ico{
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+    padding-bottom: 43px;
+    & a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 28px;
+        height: 28px;
+        stroke: @primary-color;
+        background-color: @secondary-color;
+        border-radius: 100%;
+
+        &:hover{
+            color: darken(@primary-color,20%);
+            background-color: darken(@secondary-color,30%);
+        }
+
+        &:active{
+            background-color: darken(@secondary-color,10%);
+        }
+
+    }
+}
+
+.main-contacts__map{
+    text-align: center;
+    padding-bottom: 66px;
+}

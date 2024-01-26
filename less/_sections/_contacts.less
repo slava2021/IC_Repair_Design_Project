@@ -1,6 +1,23 @@
+.main-contacts{
+    position: relative;
+    background: center / cover no-repeat url("../images/contacts_bg.jpg");
+}
+
+.main-contacts_bg{
+    background: linear-gradient(180deg, rgba(24, 24, 24, 0.90) 3.47%, rgba(24, 24, 24, 0.72) 100%);
+}
+
 .main-contacts__form-block{
+    position: absolute;
     width: 883px;
     height: 445px;
-    margin: 0 auto;
     background-color: @forth-color;
+    top: -222px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 200;
+}
+
+.main-contacts__ico{
+    text-align: center;
 }

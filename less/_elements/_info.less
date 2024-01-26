@@ -1,0 +1,36 @@
+.main-repair__price,
+.main-clients__info
+{
+    position: absolute;
+   .font-title(@primary-color);
+    font-size: 18px;
+    background-color: @secondary-color;
+    z-index: 10;
+    bottom:-25px;
+    left: 0px;
+}
+
+.main-repair__price{
+    padding: 17px 21px;
+    box-shadow: 5px 5px 10px 0px rgba(227, 184, 115, 0.30);
+}
+
+.main-clients__info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 20px 0px rgba(227, 184, 115, 0.50);
+
+    & div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 11px 18px;
+        &:first-child{
+            border-right: 1px solid @primary-color;
+        }
+        & svg{
+            margin-right: 15px;
+        }
+    }
+}

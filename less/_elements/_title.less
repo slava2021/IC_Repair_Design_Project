@@ -32,7 +32,9 @@
 
 //h2 for video, repair
 .main-video__h2,
-.main-repair__h2{
+.main-repair__h2,
+.main-clients__h2
+{
     text-align: center;
     font-size: 20px;
     margin: 0;
@@ -45,8 +47,17 @@
 }
 
 //Section Repair
-.main-repair__h2{
+.main-repair__h2,
+.main-clients__h2
+{
     .font-title(@forth-color);
+}
+
+.main-repair__h3,
+.main-claients__h3{
+    .font-title(@third_color);
+    text-transform: capitalize;
+    margin: 0;
 }
 
 .main-repair__h3{
@@ -75,4 +86,46 @@
 .main-gallery__h2{
     .font-title(@secondary-color);
     padding-bottom: 47px;
+}
+
+//Section Clients
+.main-clients__h2{
+    padding-top: 110px;
+}
+.main-claients__h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-left: 100px;
+    padding-bottom: 40px;
+    &::before{
+        position: absolute;
+        content: "";
+        width: 76px;
+        height: 76px;
+        border-radius: 100%;
+        left: 0;
+    }
+}
+
+.client-1::before{
+    background: center / contain no-repeat url("../images/client_1.jpg");
+}
+
+.client-2::before{
+    background: center / contain no-repeat url("../images/client_2.jpg");
+}
+
+.client-3::before{
+    background: center / contain no-repeat url("../images/client_3.jpg");
+}
+
+//Section Contacts
+.main-contacts__h2{
+    .font-title(@primary-color);
+    text-align: center;
+    font-size: 20px;
+    padding-top: 34px;
+    padding-bottom: 45px;
 }

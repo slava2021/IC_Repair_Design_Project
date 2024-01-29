@@ -14,6 +14,7 @@
     font-size: 14px;
     line-height: 135.84%; /* 19.018px */ 
     padding-bottom: 54px;
+    width: 100%;
 }
 
 .main-home__button{
@@ -28,16 +29,16 @@
 
 .main-projects__content{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
     grid-template-rows: auto auto auto;
-    grid-column-gap: 50px;
+    grid-column-gap: 0;
 }
 
 .main-projects__container{
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto auto;
-    grid-column-gap: 61px;
+    grid-column-gap: 64;
     grid-row-gap: 27px;
 }
 
@@ -50,11 +51,16 @@
 
 }
 
+.main-projects__right {
+    padding-right: 0;
+}
+
 .main-project__top{
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 1;
+    padding-bottom: 63px;
 }
 
 .main-projects__slider-nav,
@@ -85,8 +91,8 @@
 }
 
 .main-projects__slider {
-    background: no-repeat url(../images/slider_1.jpg);
-    width: 340px;
+    background:center / cover no-repeat url(../images/slider_1.jpg);
+    width: 320px;
     height: 241px;
 }
 
@@ -108,13 +114,13 @@
 }
 
 .main-video_bg {
-    width: 340px;
+    width: 320px;
     height:207px;
     margin-top: 0;
     margin-bottom: 0px;
 }
 .main-video__video {
-    width: 340px;
+    width: 320px;
     height: 207px;
 }
 
@@ -211,7 +217,7 @@
 }
 
 .main-repair__block {
-    width: 340px;
+    width: 320px;
     height: 365px;
     padding-left: 0px;
     padding-right: 0px;
@@ -279,7 +285,7 @@
 }
 
 .main-gallery__images{
-    width:340px;
+    width:320px;
     height: 242px;
     background: center / contain no-repeat url("../images/gallery_1_375px.jpg");
     & .main-gallery__column{
@@ -292,17 +298,134 @@
     display: none;
 }
 
-//Block COntacts
+//Block Contacts
+.main-contacts {
+    position: relative;
+    background: none;
+    top: -121px;
+
+    & .container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.main-contacts_bg {
+    background: @forth-color;
+}
 
 .main-contacts__form-block {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: auto;
     background-color: #181818;
-    top: -121px;
-    padding-top: 121px;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
+    margin-top: 0px;
+    padding-top: 0px;
+    top: 0;
+    //left: 50%;
+    //transform: translate(-50%, 0);
     z-index: 200;
+
+    & .main-contacts__h2{
+        padding-top: 173px;
+        padding-bottom: 52px;
+        color: #FFF;
+        font-size: 20px;
+    }
+}
+
+.main-contacts__form {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5, auto);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 0 auto;
+    width: 100%;
+
+    & .item-1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        //border: 1px solid yellow;
+        padding-bottom: 63px;
+    }
+    
+    & .item-2{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        padding-bottom: 63px;
+        //border: 1px solid white;
+    }
+
+    & .item-3{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+        padding-bottom: 21px;
+        //border: 1px solid white;
+    }
+
+    & .item-4{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 4;
+        padding-bottom: 67px;
+        padding-left: 0;
+        padding-right: 0;
+        //border: 1px solid white;
+        text-align: left;
+    }
+
+    & .item-5{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 5;
+        width: 100%;
+        //border: 1px solid white;
+        padding-bottom: 46px;
+        padding-left: 0;
+        padding-right: 0;
+        & input[type="submit"]{
+            width: 100%;
+        }
+    }
+}
+
+//Section Map
+.secondary-color{
+    width: 100%;
+    font-size: 18px;
+    padding-top: 41px;
+    padding-bottom: 23px;
+    order: 1;
+}
+
+.main-contacts__ico{
+    margin: 0 auto;
+    order: 1;
+    padding-bottom: 48px;
+}
+.main-contacts__map{
+    width: 320px;
+    height: 256px;
+    background: center / cover no-repeat url("../images/contacts_map.jpg");
+    padding-bottom: 0;
+    & img{
+        display: none;
+    }
+}
+
+
+
+//Section Footer
+.footer{
+    display: none;
 }

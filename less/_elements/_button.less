@@ -100,6 +100,7 @@
 //Video section
 .main-video__button{
     position: absolute;
+    align-items: center;
     width: 85px;
     height: 85px;
     border-radius: 100%;
@@ -115,9 +116,11 @@
     transition: background-color .2s ease-in-out;
 
     & .play-ico{
-        margin: 0 auto;
+        position: absolute;
         width: 0;
         height: 0;
+        left: 40%;
+        transform: translate(-40%, 0);
         border-left: 12px solid transparent;
         border-right: 12px solid transparent;
         border-bottom: 20px solid @primary-color;

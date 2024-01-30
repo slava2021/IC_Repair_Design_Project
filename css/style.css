@@ -105,6 +105,9 @@
 }
 .main-video__button {
   position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 85px;
   height: 85px;
   border-radius: 100%;
@@ -121,9 +124,12 @@
   transition: background-color 0.2s ease-in-out;
 }
 .main-video__button .play-ico {
-  margin: 0 auto;
+  position: absolute;
   width: 0;
   height: 0;
+  left: 40%;
+  -webkit-transform: translate(-40%, 0);
+          transform: translate(-40%, 0);
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
   border-bottom: 20px solid #ffffff;
@@ -346,10 +352,14 @@
 }
 .main-contacts__ico a:hover {
   color: #cccccc;
-  background-color: #9d6d20;
+  background-color: #dba249;
 }
 .main-contacts__ico a:active {
-  background-color: #dba249;
+  background-color: #ebce9d;
+}
+.main-contacts__ico a:focus {
+  -webkit-box-shadow: 0px 0px 0px 1px #ffffff;
+          box-shadow: 0px 0px 0px 1px #ffffff;
 }
 .main-contacts__map {
   text-align: center;
@@ -1137,6 +1147,11 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.header,
+.main,
+.footer {
+  min-width: 1440px;
+}
 .container {
   max-width: 1263px;
   margin: 0 auto;
@@ -1438,6 +1453,19 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 @media (max-width: 375px) {
+  .header,
+  .main,
+  .footer {
+    min-width: 375px;
+  }
+  .main-projects__slider,
+  .main-video_bg,
+  .main-video__video,
+  .main-repair__block,
+  .main-gallery__images,
+  .main-contacts__map {
+    width: 340px;
+  }
   .container {
     padding-left: 18px;
     padding-right: 18px;
@@ -1445,6 +1473,11 @@
   .header-nav,
   .header-button {
     display: none;
+  }
+  .header,
+  .main,
+  .container {
+    width: 375px;
   }
   .main-home_bg-color,
   .home-bg {
@@ -1471,6 +1504,7 @@
     height: auto;
   }
   .main-projects__content {
+    position: relative;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto auto;
@@ -1500,8 +1534,69 @@
     grid-row-end: 1;
     padding-bottom: 63px;
   }
-  .main-projects__slider-nav,
   .main-projects__nav {
+    display: none;
+  }
+  .main-projects__slider-nav {
+    position: absolute;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    top: 42.5%;
+    width: 340px;
+    z-index: 400;
+  }
+  .main-projects__slider-nav button:first-child svg,
+  .main-projects__slider-nav button:last-child svg {
+    display: none;
+  }
+  .main-projects__slider-nav button:first-child,
+  .main-projects__slider-nav button:last-child {
+    width: 36px;
+    height: 36px;
+    background-color: #e3b873;
+    border-radius: 100%;
+  }
+  .main-projects__slider-nav button:first-child:hover,
+  .main-projects__slider-nav button:last-child:hover {
+    background-color: #ebce9d;
+  }
+  .main-projects__slider-nav button:first-child:active,
+  .main-projects__slider-nav button:last-child:active {
+    background-color: #dba249;
+  }
+  .main-projects__slider-nav button:first-child:focus,
+  .main-projects__slider-nav button:last-child:focus {
+    -webkit-box-shadow: 0px 0px 0px 1px #ffffff;
+            box-shadow: 0px 0px 0px 1px #ffffff;
+  }
+  .main-projects__slider-nav button:first-child {
+    margin-left: 14px;
+  }
+  .main-projects__slider-nav button:first-child:after {
+    position: relative;
+    display: block;
+    content: "";
+    background-image: url('data:image/svg+xml,<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.56569 11.478L1.08689 5.99975L6.56569 0.521471L7.34778 1.30348L2.65107 5.99975L7.34778 10.696L6.56569 11.478Z" fill="white" stroke="white" stroke-width="0.75"/></svg>');
+    width: 6.26px;
+    height: 11px;
+    left: 30%;
+  }
+  .main-projects__slider-nav button:last-child {
+    margin-right: 14px;
+  }
+  .main-projects__slider-nav button:last-child:after {
+    position: relative;
+    display: block;
+    content: "";
+    background-image: url('data:image/svg+xml,<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.56569 11.478L1.08689 5.99975L6.56569 0.521471L7.34778 1.30348L2.65107 5.99975L7.34778 10.696L6.56569 11.478Z" fill="white" stroke="white" stroke-width="0.75"/></svg>');
+    width: 6.26px;
+    height: 11px;
+    left: 40%;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .main-projects__slider-nav > button:not(:first-child):not(:last-child) {
     display: none;
   }
   .main-projects__h2 {
@@ -1510,12 +1605,16 @@
     line-height: 138.6%;
     /* 30.492px */
     letter-spacing: -1.54px;
+    text-align: center;
   }
   .main-projects__p {
     padding-top: 22px;
     font-size: 11px;
     line-height: 158.48%;
     /* 17.433px */
+    text-align: center;
+    padding-left: 22px;
+    padding-right: 22px;
   }
   .main-projects__h3 {
     font-size: 14px;
@@ -1527,7 +1626,6 @@
   }
   .main-projects__slider {
     background: center / cover no-repeat url(../images/slider_1.jpg);
-    width: 320px;
     height: 241px;
   }
   .main-video {
@@ -1546,13 +1644,11 @@
     font-size: 22px;
   }
   .main-video_bg {
-    width: 320px;
     height: 207px;
     margin-top: 0;
     margin-bottom: 0px;
   }
   .main-video__video {
-    width: 320px;
     height: 207px;
   }
   .main-video__button {
@@ -1653,7 +1749,6 @@
     row-gap: 178px;
   }
   .main-repair__block {
-    width: 320px;
     height: 365px;
     padding-left: 0px;
     padding-right: 0px;
@@ -1711,8 +1806,8 @@
     display: none;
   }
   .main-gallery__images {
-    width: 320px;
     height: 242px;
+    margin-bottom: -121px;
     background: center / contain no-repeat url("../images/gallery_1_375px.jpg");
   }
   .main-gallery__images .main-gallery__column {
@@ -1724,7 +1819,6 @@
   .main-contacts {
     position: relative;
     background: none;
-    top: -121px;
   }
   .main-contacts .container {
     display: -webkit-box;
@@ -1827,7 +1921,6 @@
     padding-bottom: 48px;
   }
   .main-contacts__map {
-    width: 320px;
     height: 256px;
     background: center / cover no-repeat url("../images/contacts_map.jpg");
     padding-bottom: 0;

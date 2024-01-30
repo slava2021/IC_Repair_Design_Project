@@ -1,3 +1,10 @@
+.header,
+.main,
+.container
+{
+    width: 375px;
+}
+
 .main-home_bg-color,
 .home-bg
 {
@@ -28,6 +35,7 @@
 }
 
 .main-projects__content{
+    position: relative;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto auto;
@@ -63,10 +71,80 @@
     padding-bottom: 63px;
 }
 
-.main-projects__slider-nav,
 .main-projects__nav
 {
     display: none;
+}
+
+.main-projects__slider-nav{
+    position: absolute;
+    justify-content: space-between;
+    top: 42.5%;
+    width: 340px;
+    z-index: 400;
+
+    & button:first-child svg,
+    & button:last-child svg
+    {
+        display: none;
+    }
+
+    & button:first-child,
+    & button:last-child{
+        width: 36px;
+        height: 36px;
+        background-color: @secondary-color;
+        border-radius: 100%;
+
+        &:hover{
+            background-color: lighten(@secondary-color, 10%);
+        }
+        &:active{
+            background-color: darken(@secondary-color, 10%);            
+        }
+        &:focus{
+            box-shadow: 0px 0px 0px 1px #ffffff;
+        }
+
+
+    }
+
+    & button:first-child{
+        margin-left: 14px;
+        &:after{
+            position: relative;
+            display: block;
+            content: "";
+            background-image: url('data:image/svg+xml,<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.56569 11.478L1.08689 5.99975L6.56569 0.521471L7.34778 1.30348L2.65107 5.99975L7.34778 10.696L6.56569 11.478Z" fill="white" stroke="white" stroke-width="0.75"/></svg>');
+            width: 6.26px;
+            height: 11px;
+            left: 30%;
+            //transform: rotate(90deg);
+        }
+    }
+
+    & button:last-child{
+        margin-right: 14px;
+        &:after{
+            position: relative;
+            display: block;
+            content: "";
+            background-image: url('data:image/svg+xml,<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.56569 11.478L1.08689 5.99975L6.56569 0.521471L7.34778 1.30348L2.65107 5.99975L7.34778 10.696L6.56569 11.478Z" fill="white" stroke="white" stroke-width="0.75"/></svg>');
+            width: 6.26px;
+            height: 11px;
+            left: 40%;
+            transform: rotate(180deg);
+        }
+    }
+
+    & > button:not(:first-child):not(:last-child){
+        display: none;
+    }
+
+}
+
+.main-projects__slider{
+
 }
 
 .main-projects__h2{
@@ -74,11 +152,15 @@
     font-size: 22px;
     line-height: 138.6%; /* 30.492px */
     letter-spacing: -1.54px;
+    text-align: center;
 }
 .main-projects__p{
     padding-top: 22px;
     font-size: 11px;
     line-height: 158.48%; /* 17.433px */
+    text-align: center;
+    padding-left:22px;
+    padding-right: 22px;
 }
 
 .main-projects__h3{
@@ -92,7 +174,6 @@
 
 .main-projects__slider {
     background:center / cover no-repeat url(../images/slider_1.jpg);
-    width: 320px;
     height: 241px;
 }
 
@@ -114,13 +195,11 @@
 }
 
 .main-video_bg {
-    width: 320px;
     height:207px;
     margin-top: 0;
     margin-bottom: 0px;
 }
 .main-video__video {
-    width: 320px;
     height: 207px;
 }
 
@@ -217,7 +296,6 @@
 }
 
 .main-repair__block {
-    width: 320px;
     height: 365px;
     padding-left: 0px;
     padding-right: 0px;
@@ -285,8 +363,8 @@
 }
 
 .main-gallery__images{
-    width:320px;
     height: 242px;
+    margin-bottom: -121px;
     background: center / contain no-repeat url("../images/gallery_1_375px.jpg");
     & .main-gallery__column{
         display: none;
@@ -302,7 +380,7 @@
 .main-contacts {
     position: relative;
     background: none;
-    top: -121px;
+    //top: -121px;
 
     & .container{
         display: flex;
@@ -414,7 +492,6 @@
     padding-bottom: 48px;
 }
 .main-contacts__map{
-    width: 320px;
     height: 256px;
     background: center / cover no-repeat url("../images/contacts_map.jpg");
     padding-bottom: 0;
@@ -422,8 +499,6 @@
         display: none;
     }
 }
-
-
 
 //Section Footer
 .footer{

@@ -155,12 +155,17 @@
 
         &:hover{
             color: darken(@primary-color,20%);
-            background-color: darken(@secondary-color,30%);
+            background-color: darken(@secondary-color,10%);
         }
 
         &:active{
-            background-color: darken(@secondary-color,10%);
+            background-color: lighten(@secondary-color,10%);
         }
+
+        &:focus{
+            box-shadow: 0px 0px 0px 1px @primary-color;
+        }
+
 
     }
 }
